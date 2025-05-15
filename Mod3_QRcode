@@ -1,0 +1,40 @@
+import sys
+import qrcode
+
+def generate_qr_from_file(input_filepath):
+    try:
+        with open(input_filepath, 'r') as file:
+            lines = file.readlines()
+
+        if len(lines) < 2:
+            print("Error: The input file must contain at least two lines: URL and filename.")
+            return
+
+        url = lines[0].strip()
+        filename = lines[1].strip()
+
+        # Generate QR code
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(url)
+        qr.make(fit=True)
+
+        img = qr.make_image(fill_color="black", back_color="white")
+        img.save(filename)
+        print(f"QR code saved as {filename}")
+
+    except FileNotFoundError:
+        print(f"Error: File '{input_filepath}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python generate_qr.py <input_text_file>")
+    else:
+        input_file = sys.argv[1]
+        generate_qr_from_file(input_file)
