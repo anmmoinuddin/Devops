@@ -1,0 +1,25 @@
+# Blue deployment (current stable)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: machine
+  labels:
+    app: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+      env: green
+  template:
+    metadata:
+      labels:
+        app: backend
+        env: green
+    spec:
+      containers:
+      - name: backend
+        image: anmmoinuddin/myapp:v1 
+        ports:
+        - containerPort: 8000

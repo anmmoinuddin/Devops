@@ -1,0 +1,32 @@
+# canary-rollout.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: backend-deployment
+  namespace: machine
+  labels:
+    app: backend
+spec:
+  replicas: 2
+  strategy:
+    canary:
+      steps:
+      - pause:
+          duration: 10s
+      - setWeight: 50
+      - pause:
+          duration: 10s
+      - setWeight: 100
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: anmmoinuddin/myapp:v1
+        ports:
+        - containerPort: 5000
