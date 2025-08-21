@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "name": "Apple",
+        "description": "Product 1",
+        "price": 1.99,
+        "image": "./images/apple.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Banana",
+        "description": "Product 2",
+        "price": 0.50,
+        "image": "./images/banana.jpeg"
+    },
+
+    {
+        "id": 3,
+        "name": "coconut",
+        "description": "Product 3",
+        "price": 1.99,
+        "image": "./images/coconut.jpeg"
+    },
+
+    {
+        "id": 4,
+        "name": "Dragonfruit",
+        "description": "Product 4",
+        "price": 1.99,
+        "image": "./images/Dragonfruit.webp"
+    },
+
+    {
+        "id": 5,
+        "name": "guava",
+        "description": "Product 5",
+        "price": 2,
+        "image": "./images/guava.jpg"
+    },
+
+    {
+        "id": 6,
+        "name": "Kiwi",
+        "description": "Product 6",
+        "price": 0.50,
+        "image": "./images/kiwi.jpg"
+    },
+    {
+        "id": 7,
+        "name": "lici",
+        "description": "Product 7",
+        "price": 0.20,
+        "image": "./images/lici.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Mango",
+        "description": "Product 8",
+        "price": 1,
+        "image": "./images/mango.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Orange",
+        "description": "Product 9",
+        "price": 1,
+        "image": "./images/orange.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Papaya",
+        "description": "Product 10",
+        "price": 1.2,
+        "image": "./images/papaya.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Pineapple",
+        "description": "Product 11",
+        "price": 2.30,
+        "image": "./images/pineapple.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Watermelon",
+        "description": "Product 12",
+        "price": 3.20,
+        "image": "./images/watermelon.jpg"
+    }
+
+]
